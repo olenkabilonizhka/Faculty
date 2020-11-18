@@ -8,13 +8,16 @@ using namespace std;
 class Staff : public Person {
 protected:
 	string subject;
-	int yearcourse;
 public:
-	Staff(string = "", string = "", string = "");
-	Staff(Person& p, string = "");
+	Staff(string = "", string = "", string = "", int = 0);
+	Staff(Person& p, string = "", int = 0);
 	void Print() override;
-	string GetSubject();
+	string GetStorageName();
+	//void SetYear(int y = 0);
+	void PrintCourt();
+	friend ifstream& operator>>(ifstream& fin, Staff& sf);
+	friend ofstream& operator<<(ofstream& fout, Staff& sf);
+	friend ostream& operator<<(ostream& out, Staff& sf);
 };
-
 
 #endif

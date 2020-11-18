@@ -1,5 +1,7 @@
-Ern Staff1 English
-Harry Staff2 English
-Niall Staff3 French
-Raf Staff4 English
-Ref Staff5 English
+Ern Staff1 English 2
+Harry Staff2 English 4
+Niall Staff3 French 1
+Ralf Staff4 English 0
+John Staff5 English 6
+Anna Staff6 Spanish 3
+Sofia Staff7 French 5

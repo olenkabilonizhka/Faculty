@@ -2,18 +2,22 @@
 #define PERSON_H
 
 #include <string>
-#include "Entity.h"
 using namespace std;
 
 class Person {
 protected:
 	string name;
 	string lastname;
+	int year;
 public:
-	Person(string = "", string = "");
+	Person(string = "", string = "",int = 0);
 	virtual void Print();
 	string GetLastname();
 	string GetName();
+	int GetYear();
+	void SetYear(int k = 0) {
+		this->year = k;
+	}
 };
 
 #endif

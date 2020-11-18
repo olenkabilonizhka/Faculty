@@ -10,10 +10,10 @@ class StudentEM : public Student {
 public:
 	StudentEM(string name = "", string lastname = "", int year = 2020, string course = "") : Student(name, lastname, year, course) {};
 	void Print() override {
-		cout << name << " " << lastname << "," << course << ", EM" << endl;
+		cout << name << " " << lastname << "," << course << ", EM";
 	}
-	string ti() override {
-		return "StudentEM";
+	string GetStorageName() {
+		return "D:/c++/2 курс/lessons/navchalna/FacultyPr/FacultyPr/StudentsEM.txt";
 	}
 };
 

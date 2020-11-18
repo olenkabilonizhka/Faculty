@@ -3,20 +3,18 @@
 
 #include "Student.h"
 #include "Staff.h"
-#include "StaffAcademics.h"
 #include "StudentEM.h"
-#include "StudentRepository.h"
-#include "StaffRepository.h"
+#include "Repository.h"
 #include <string>
 using namespace std;
 
 class Command {
 private:
-	StudentRepository StsRepository = StudentRepository(true);
-	StaffRepository StfRepository = StaffRepository(true);
+	Repository<Student> StsRepository = Repository<Student>(true);
+	Repository<Staff> StfRepository = Repository<Staff>(true);
+	Repository<StudentEM> StsEmRepository = Repository<StudentEM>(true);
 	string* bachelor;
 	string* master;
-	StaffAcademics** list;
 	static int b;
 	static int m;
 public:
@@ -24,8 +22,8 @@ public:
 	void AddStaff(Staff&);
 	void AddStudent(Student&);
 	void AddStudentEM(StudentEM&);
-	void AllStaff();
 	void AllStudents();
+	void AllStaff();
 	void Courators();
 	void GetBach();
 	void GetMast();

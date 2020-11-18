@@ -2,9 +2,10 @@
 #include <iostream>
 using namespace std;
 
-Person::Person(string name, string lastname) {
+Person::Person(string name, string lastname, int year) {
 	this->name = name;
 	this->lastname = lastname;
+	this->year = year;
 }
 
 void Person::Print() {
@@ -17,4 +18,8 @@ string Person::GetName() {
 
 string Person::GetLastname() {
 	return lastname;
+}
+
+int Person::GetYear() {
+	return year;
 }

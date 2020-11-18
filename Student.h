@@ -7,14 +7,15 @@ using namespace std;
 
 class Student : public Person {
 protected:
-	int year = 2020;
 	string course = "";
 public:
 	Student(string = "", string = "", int = 2020, string = "");
 	void Print() override;
+	string GetStorageName();
 	string GetCourse();
-	int GetYear();
-	virtual string ti();
+	friend ifstream& operator>>(ifstream& fin, Student& st);
+	friend ofstream& operator<<(ofstream& fout, Student& st);
+	friend ostream& operator<<(ostream& out, Student& st);
 };
 
 #endif
